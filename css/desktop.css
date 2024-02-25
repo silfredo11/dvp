@@ -101,7 +101,7 @@ header {
     display: flex;
     align-items: center;
     justify-content: flex-start; /* Alinea los elementos al inicio, manteniendo el logo a la izquierda */
-    padding: 50px;
+    padding: 30px;
     background-color: var(--white-color);
     font-size: 1.6rem;
     position: fixed; /* Hace que el header sea fijo */
@@ -246,7 +246,7 @@ main {
 /*Here star main section nuestros servicios */
 
 .main__section--nuestros-servicios {
-    padding: 90px;
+    padding: 40px;
     background-color: var(--second-gris-color);
     color: var(--second-white-color); /* Asegura que el texto herede este color, si es necesario */
 }
@@ -264,7 +264,7 @@ main {
     /* El height se ajustará automáticamente según el contenido */
     align-items: flex-start; /* Alinea los elementos hijos al inicio, es decir, la parte superior del contenedor */
     flex-direction: row; /* Organiza los hijos en una columna si necesitas que estén uno debajo del otro */
-    gap: 60px;
+    gap: 40px;
 }
 
         /* Card section */

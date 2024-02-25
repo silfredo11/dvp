@@ -216,9 +216,11 @@ main {
 
 .main__section--quienessomos__description {
     font-size: 1.6rem;
+    width: 70%;
     color: var(--principal-black-color);
     margin-top: 20px; /* Espacio entre el título y el párrafo */
     text-align: center; /* Centra el texto del párrafo */
+    line-height: 1.6;
 }
 
 .main__section--quienessomos__image {

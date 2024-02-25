@@ -128,3 +128,38 @@ nav a {
 nav a:hover {
     color: var(--button-color);
 }
+
+/* This is the main section */
+
+
+
+/* This is the footer section */
+
+.footer {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); /* Crea una grilla de 3 columnas */
+    gap: 20px; /* Espacio entre columnas */
+    padding: 50px;
+    background-color: var(--white-color);
+    color: var(--principal-black-color);
+    width: 100%;
+}
+
+.footer__column {
+    /* Estilos opcionales para los divs de las columnas */
+}
+
+.footer__title {
+    margin: 0 0 10px; /* Espacio debajo del título */
+    font-size: 2.4rem;
+    text-align: center;
+}
+
+.footer__content {
+    margin: 8px 0; /* Espacio entre párrafos */
+    font-size: 1.6rem;
+    color: var(--principal-black-color);
+    font-style: italic;
+    text-align: center;
+
+}

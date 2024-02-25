@@ -93,3 +93,38 @@ html{
     --principal-gris-color: #b8c0cc;
     --second-gris-color: #88888d;
 }
+
+/*Header*/
+
+
+header {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start; /* Alinea los elementos al inicio, manteniendo el logo a la izquierda */
+    padding: 50px;
+    background-color: var(--white-color);
+    font-size: 1.6rem;
+}
+
+.contenedor-logo img {
+    width: 40px; /* Establece el ancho del logo */
+    height: 40px; /* Establece la altura del logo */
+    border-radius: 50%; /* Hace que el logo sea redondo */
+    object-fit: cover; /* Asegura que la imagen cubra el espacio sin deformarse */
+}
+
+nav {
+    display: flex;
+    justify-content: center; /* Centra los enlaces dentro del nav */
+    flex-grow: 1; /* Permite que el nav ocupe todo el espacio restante */
+}
+
+nav a {
+    margin: 0 15px;
+    text-decoration: none;
+    color: var(--principal-black-color);
+}
+
+nav a:hover {
+    color: var(--button-color);
+}

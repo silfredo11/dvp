@@ -133,13 +133,17 @@ nav a:hover {
     color: var(--button-color);
 }
 
-nav a.activo {
+nav a.active {
     border-bottom: 2px solid var(--button-color); /* Añade una línea debajo del enlace activo */
     padding-bottom: 5px; /* Opcional: Ajusta el padding para que el texto no esté demasiado cerca de la línea */
 }
 
 
 /* This is the main section */
+
+main {
+    margin-top: 144px; /* Ajusta este valor según la altura real de tu header */
+}
 
 /*This part is main section presentation*/
 

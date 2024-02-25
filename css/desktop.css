@@ -195,6 +195,14 @@ main {
     height: 500px;
 }
 
+/**/
+
+.main__section--quienessomos{
+    width: 100%;
+    height: 1000px;
+    background-color: red;
+}
+
 
 /* This is the footer section */
 

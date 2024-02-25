@@ -33,3 +33,18 @@ document.addEventListener("DOMContentLoaded", () => {
     // Activa el primer enlace al cargar la página si está en la parte superior
     activateLink(sections[0].getAttribute("id"));
 });
+
+
+/*Arrow code */
+
+function scrollCards(direction) {
+    const container = document.querySelector('.main__section--nuestros-servicios__content');
+    const cardWidth = document.querySelector('.card').clientWidth; // Ancho de una card
+    const gap = 40; // El gap definido en tu CSS
+
+    if (direction === 'right') {
+        container.scrollLeft += cardWidth + gap;
+    } else {
+        container.scrollLeft -= cardWidth + gap;
+    }
+}

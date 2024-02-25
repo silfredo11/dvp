@@ -260,11 +260,12 @@ main {
 
 .main__section--nuestros-servicios__content {
     display: flex;
+    overflow: hidden;
+    position: relative;
+    width: calc(100% - 120px); /* Ajusta para las flechas */
+    align-items: center;
+    gap: 26px;
     width: 100%;
-    /* El height se ajustará automáticamente según el contenido */
-    align-items: flex-start; /* Alinea los elementos hijos al inicio, es decir, la parte superior del contenedor */
-    flex-direction: row; /* Organiza los hijos en una columna si necesitas que estén uno debajo del otro */
-    gap: 40px;
 }
 
         /* Card section */
@@ -277,13 +278,11 @@ main {
             margin: 0 0 40px;
             padding: 20px 20px 20px 20px;
             min-height: 220px;
-            border-bottom: #E6E9ED;
-            border-bottom: 1px solid  var(--border-color);
+            border-bottom: 1px solid var(--border-color);
             background-color: var(--second-white-color);
-            background-size: cover;
             position: relative;
             border-radius: 12px;
-            max-width: 400px;
+            max-width: 360px;
         }
 
         /* Cuando el dispositivo tiene un ancho mayor a 720px */
@@ -294,17 +293,7 @@ main {
         }
 
 /* Cuando el dispositivo tiene un ancho mayor a 920px */
-@media (min-width: 920px) {
-    .card {
-        transition: transform 500ms;
-        min-width: 400px;
-    }
 
-    .card:hover {
-        transform: scale(1.1);
-        transition: transform 500ms;
-    }
-}
         
         .card__a{
             position: relative;
@@ -391,6 +380,30 @@ main {
             font-size: 1.2rem;
             font-weight: 400;
         }
+
+/* Arrow code */
+
+.arrow {
+    display: none;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 60px;
+    height: 60px;
+    background-color: var(--button-color);
+    border-radius: 50%;
+    cursor: pointer;
+    justify-content: center;
+    align-items: center;
+    font-size: 30px;
+}
+
+.arrow-left { left: 10px; }
+.arrow-right { right: 10px; }
+
+.main__section--nuestros-servicios:hover .arrow {
+    display: flex;
+}
 
 /* This is the footer section */
 

@@ -104,6 +104,10 @@ header {
     padding: 50px;
     background-color: var(--white-color);
     font-size: 1.6rem;
+    position: fixed; /* Hace que el header sea fijo */
+    top: 0; /* Alinea el header en la parte superior */
+    width: 100%; /* Asegura que el header tenga un ancho completo */
+    z-index: 1000;
 }
 
 .contenedor-logo img {
@@ -128,6 +132,12 @@ nav a {
 nav a:hover {
     color: var(--button-color);
 }
+
+nav a.activo {
+    border-bottom: 2px solid var(--button-color); /* Añade una línea debajo del enlace activo */
+    padding-bottom: 5px; /* Opcional: Ajusta el padding para que el texto no esté demasiado cerca de la línea */
+}
+
 
 /* This is the main section */
 

@@ -131,6 +131,47 @@ nav a:hover {
 
 /* This is the main section */
 
+/*This part is main section presentation*/
+
+.main__section--presentacion {
+    padding: 0 90px 90px 90px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+
+.main__section--presentacion--son{
+    margin-bottom: 20px;
+}
+
+.main__section--presentacion h1 {
+    font-size: 6.4rem;
+    color: var(--principal-black-color);
+}
+
+.main__section--presentacion p {
+    font-size: 1.6rem;
+    color: var(--principal-black-color);
+    line-height: 1.6;
+}
+
+.main__section--presentacion a {
+    display: inline-block;
+    background-color: var(--button-color);
+    color: var(--second-white-color);
+    padding: 20px 80px; /* Ajustado para un alto de 60px y ancho de 30px de texto */
+    text-decoration: none;
+    border-radius: 5px; /* Opcional: añade redondeo a tu botón */
+    font-size: 1.6rem;
+    margin-bottom: 60px;
+}
+
+.main__section--presentacion img {
+    width: 80%;
+    height: 500px;
+}
 
 
 /* This is the footer section */

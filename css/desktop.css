@@ -243,7 +243,156 @@ main {
 }
 
 
+/*Here star main section nuestros servicios */
 
+.main__section--nuestros-servicios {
+    padding: 90px;
+    background-color: var(--second-gris-color);
+    color: var(--second-white-color); /* Asegura que el texto herede este color, si es necesario */
+}
+
+.main__section--nuestros-servicios__title {
+    font-size: 4.8rem;
+    color: var(--second-white-color);
+    margin-bottom: 90px;
+    text-align: left; /* Alinea el título a la izquierda */
+}
+
+.main__section--nuestros-servicios__content {
+    display: flex;
+    width: 100%;
+    /* El height se ajustará automáticamente según el contenido */
+    align-items: flex-start; /* Alinea los elementos hijos al inicio, es decir, la parte superior del contenedor */
+    flex-direction: row; /* Organiza los hijos en una columna si necesitas que estén uno debajo del otro */
+    gap: 60px;
+}
+
+        /* Card section */
+
+        .card{
+            box-shadow: 8px 14px 38px rgb(39 44 49 / 6%), 1px 3px 8px rgb(39 44 49 / 3%);
+            display: flex;
+            flex-direction: column;
+            overflow: hidden;
+            margin: 0 0 40px;
+            padding: 20px 20px 40px 20px;
+            min-height: 220px;
+            border-bottom: #E6E9ED;
+            border-bottom: 1px solid  var(--border-color);
+            background-color: var(--second-white-color);
+            background-size: cover;
+            position: relative;
+            border-radius: 12px;
+            max-width: 400px;
+        }
+
+        /* Cuando el dispositivo tiene un ancho mayor a 720px */
+        @media (min-width: 720px) {
+            .card {
+                min-width: 400px;
+            }
+        }
+
+/* Cuando el dispositivo tiene un ancho mayor a 920px */
+@media (min-width: 920px) {
+    .card {
+        transition: transform 500ms;
+        min-width: 400px;
+    }
+
+    .card:hover {
+        transform: scale(1.1);
+        transition: transform 500ms;
+    }
+}
+        
+        .card__a{
+            position: relative;
+            display: block;
+            overflow: hidden;
+            border-radius: 8px;
+        }
+        
+        .card__img{
+           width: 100%;
+           height: 200px; 
+           object-fit: cover;
+           background: no-repeat 50%;
+        }
+        
+        .card__info{
+            flex-grow: 1;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+        
+        }
+        
+        .card__infoContent{
+            position: relative;
+            display: block;
+        }
+        
+        .card__h2{
+            margin: 15px 0 0;
+            font-size: 1.9rem;
+            color: #1B1A17;
+            color: var(--principal-black-color);
+            font-weight: 500;
+            line-height: 2.85rem;
+        }
+        
+        .card__description{
+            font-size: 1.6rem;
+            max-width: 56em;
+            color: #1B1A17;
+            color: var(--principal-black-color);
+            font-weight: 300;
+            margin-top: 15px;
+        }
+        
+        .card__p{
+            margin-bottom: 1em;
+            margin: 0 0 1.5em;
+            line-height: 2.4rem;
+        }
+        
+        .card__author{
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+        }
+        
+        .card__authorAvatar{
+            width: 36px;
+            height: 36px;
+            background-position: center;
+            background-size: cover;
+            background-repeat: no-repeat;
+            background-image: url("https://i.ibb.co/N34xb91/Avatar.jpg");
+            border-radius: 50%;
+        }
+        
+        .card__authorInfo{
+            display: flex;
+            flex-direction: column;
+            margin-left: 10px;
+        }
+        
+        .card__authorName{
+            color: #434952;
+            color: var(--principal-text-color);
+            font-size: 1.2rem;
+            line-height: 1.8rem;
+            font-weight: 600;
+        }
+        
+        .card__authorData{
+            color: #738A94;
+            color: var(--description-perfil-color);
+            font-size: 1.2rem;
+            font-weight: 400;
+        }
 
 /* This is the footer section */
 

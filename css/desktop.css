@@ -166,6 +166,14 @@ nav a:hover {
     border-radius: 5px; /* Opcional: añade redondeo a tu botón */
     font-size: 1.6rem;
     margin-bottom: 60px;
+    border-radius: 5px; /* Opcional: añade redondeo a tu botón */
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.main__section--presentacion .contact-button:hover {
+    background-color: var(--second-white-color); /* Invierte los colores */
+    color: var(--button-color);
+    transform: scale(1.1); /* Aumenta el tamaño ligeramente */
 }
 
 .main__section--presentacion img {

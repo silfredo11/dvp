@@ -51,6 +51,12 @@ function scrollCards(direction) {
 
 /* Animation card service code*/
 
+// Asegura que inicialmente solo la flecha derecha sea visible.
+document.addEventListener('DOMContentLoaded', function() {
+    document.getElementById('arrow-left').style.display = 'none'; // Oculta la flecha izquierda al cargar la página.
+    document.getElementById('arrow-right').style.display = 'flex'; // Asegura que la flecha derecha esté visible.
+});
+
 document.getElementById('arrow-right').addEventListener('click', function() {
     scrollCards('right');
     // Muestra la flecha izquierda y oculta la derecha después de moverse hacia la derecha
@@ -79,4 +85,6 @@ function scrollCards(direction) {
     }
     container.style.transition = 'transform 0.5s ease-out';
 }
+
+
 

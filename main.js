@@ -37,54 +37,39 @@ document.addEventListener("DOMContentLoaded", () => {
 
 /*Arrow code */
 
-function scrollCards(direction) {
-    const container = document.querySelector('.main__section--nuestros-servicios__content');
-    const cardWidth = document.querySelector('.card').clientWidth; // Ancho de una card
-    const gap = 40; // El gap definido en tu CSS
-
-    if (direction === 'right') {
-        container.scrollLeft += cardWidth + gap;
-    } else {
-        container.scrollLeft -= cardWidth + gap;
-    }
-}
-
-/* Animation card service code*/
-
-// Asegura que inicialmente solo la flecha derecha sea visible.
 document.addEventListener('DOMContentLoaded', function() {
-    document.getElementById('arrow-left').style.display = 'none'; // Oculta la flecha izquierda al cargar la página.
-    document.getElementById('arrow-right').style.display = 'flex'; // Asegura que la flecha derecha esté visible.
+    // Inicialmente, solo la flecha derecha es visible.
+    document.getElementById('arrow-left').style.display = 'none';
+    document.getElementById('arrow-right').style.display = 'flex';
 });
 
 document.getElementById('arrow-right').addEventListener('click', function() {
+    // Muestra la cuarta card y ajusta la visibilidad de las flechas
     scrollCards('right');
-    // Muestra la flecha izquierda y oculta la derecha después de moverse hacia la derecha
     document.getElementById('arrow-left').style.display = 'flex';
-    document.getElementById('arrow-right').style.display = 'none';
+    this.style.display = 'none'; // Oculta la flecha derecha
 });
 
 document.getElementById('arrow-left').addEventListener('click', function() {
+    // Ajusta la visibilidad de las flechas al volver a la posición original
     scrollCards('left');
-    // Muestra la flecha derecha y oculta la izquierda después de moverse hacia la izquierda
     document.getElementById('arrow-right').style.display = 'flex';
-    document.getElementById('arrow-left').style.display = 'none';
+    this.style.display = 'none'; // Oculta la flecha izquierda
 });
 
 function scrollCards(direction) {
     const container = document.querySelector('.main__section--nuestros-servicios__content');
-    let currentTransform = parseInt(container.style.transform.replace('translateX(', '').replace('px)', '')) || 0;
-    const cardWidth = document.querySelector('.card').offsetWidth + parseInt(getComputedStyle(document.querySelector('.card')).marginRight);
-    
-    if (direction === 'right') {
-        // Mueve las cards hacia la izquierda para mostrar la siguiente card
-        container.style.transform = `translateX(${currentTransform - cardWidth}px)`;
-    } else if (direction === 'left') {
-        // Mueve las cards hacia la derecha para volver a mostrar la card anterior
-        container.style.transform = `translateX(${currentTransform + cardWidth}px)`;
-    }
-    container.style.transition = 'transform 0.5s ease-out';
+    const cardWidth = document.querySelector('.card').offsetWidth;
+    const gap = parseInt(getComputedStyle(document.querySelector('.card')).marginRight);
+
+    // Calcula el nuevo desplazamiento basado en la dirección
+    let newScrollPosition = container.scrollLeft + (direction === 'right' ? (cardWidth + gap) : -(cardWidth + gap));
+
+    // Aplica el desplazamiento
+    container.scroll({ left: newScrollPosition, behavior: 'smooth' });
 }
+
+
 
 
 

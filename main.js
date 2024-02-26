@@ -48,3 +48,35 @@ function scrollCards(direction) {
         container.scrollLeft -= cardWidth + gap;
     }
 }
+
+/* Animation card service code*/
+
+document.getElementById('arrow-right').addEventListener('click', function() {
+    scrollCards('right');
+    // Muestra la flecha izquierda y oculta la derecha después de moverse hacia la derecha
+    document.getElementById('arrow-left').style.display = 'flex';
+    document.getElementById('arrow-right').style.display = 'none';
+});
+
+document.getElementById('arrow-left').addEventListener('click', function() {
+    scrollCards('left');
+    // Muestra la flecha derecha y oculta la izquierda después de moverse hacia la izquierda
+    document.getElementById('arrow-right').style.display = 'flex';
+    document.getElementById('arrow-left').style.display = 'none';
+});
+
+function scrollCards(direction) {
+    const container = document.querySelector('.main__section--nuestros-servicios__content');
+    let currentTransform = parseInt(container.style.transform.replace('translateX(', '').replace('px)', '')) || 0;
+    const cardWidth = document.querySelector('.card').offsetWidth + parseInt(getComputedStyle(document.querySelector('.card')).marginRight);
+    
+    if (direction === 'right') {
+        // Mueve las cards hacia la izquierda para mostrar la siguiente card
+        container.style.transform = `translateX(${currentTransform - cardWidth}px)`;
+    } else if (direction === 'left') {
+        // Mueve las cards hacia la derecha para volver a mostrar la card anterior
+        container.style.transform = `translateX(${currentTransform + cardWidth}px)`;
+    }
+    container.style.transition = 'transform 0.5s ease-out';
+}
+

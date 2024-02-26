@@ -249,6 +249,7 @@ main {
     padding: 40px;
     background-color: var(--second-gris-color);
     color: var(--second-white-color); /* Asegura que el texto herede este color, si es necesario */
+    position: relative;
 }
 
 .main__section--nuestros-servicios__title {
@@ -266,7 +267,12 @@ main {
     align-items: center;
     gap: 26px;
     width: 100%;
+    transition: transform 0.5s ease;
 }
+
+/* Animation cards */
+
+
 
         /* Card section */
 
@@ -390,19 +396,30 @@ main {
     transform: translateY(-50%);
     width: 60px;
     height: 60px;
-    background-color: var(--button-color);
+    background-color: var(--button-color); /* Ajusta este valor según tu esquema de color */
     border-radius: 50%;
     cursor: pointer;
     justify-content: center;
     align-items: center;
     font-size: 30px;
+    z-index: 2; /* Asegúrate de que las flechas estén sobre el contenido */
 }
 
-.arrow-left { left: 10px; }
-.arrow-right { right: 10px; }
+.arrow-left { 
+    left: 0px; 
+    display: none;
+}
+.arrow-right {
+    right: 0px; 
+    display: none;
+}
 
 .main__section--nuestros-servicios:hover .arrow {
     display: flex;
+}
+
+.main__section--nuestros-servicios:hover .arrow-right {
+    display: flex; /* La flecha derecha se muestra solo al hacer hover */
 }
 
 /* This is the footer section */

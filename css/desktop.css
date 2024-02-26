@@ -471,19 +471,18 @@ main {
 }
 
 @keyframes desplazamiento {
+    /* Comienza ya en movimiento y visible */
     0% {
+        transform: translateX(0%);
+    }
+    50% {
+        transform: translateX(-100%);
+    }
+    50.1% {
         transform: translateX(100%);
-        opacity: 0;
-    }
-    10% {
-        opacity: 1;
-    }
-    90% {
-        opacity: 1;
     }
     100% {
-        transform: translateX(-100%);
-        opacity: 0;
+        transform: translateX(0%);
     }
 }
 

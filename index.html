@@ -335,16 +335,45 @@
 
         
         <div id="modal-container" class="modal-hidden modal__style">
+            
             <div class="modal-content">
                 <button id="close-modal">X</button>
                 <!-- Contenido del modal, como la grid de imágenes -->
-                <div class="grid-container">
-                    <!-- Imágenes aquí -->
-                </div>
+                
+                    
+                
             </div>
         </div>
-        
-        <section class="main__section main__section--contacto" id="contactos"></section>
+
+        <section class="main__section main__section--contacto" id="contactos">
+
+            <h2 class="contacto__titulo">Contáctanos</h2>
+            <p class="contacto__texto">Si estás interesado en nuestros servicios, no dudes en contactarnos. Estaremos <br> encantados de atenderte.</p>
+            <div class="formulario__contenedor">
+              
+              <form class="formulario" action="#">
+                <div class="formulario__campo">
+                  <label for="nombre" class="formulario__label">Nombre:</label>
+                  <input type="text" id="nombre" name="nombre" class="formulario__input" placeholder="Tu nombre">
+                </div>
+                <div class="formulario__campo">
+                  <label for="email" class="formulario__label">Correo electrónico:</label>
+                  <input type="email" id="email" name="email" class="formulario__input" placeholder="Tu correo electrónico">
+                </div>
+                <div class="formulario__campo">
+                  <label for="telefono" class="formulario__label">Teléfono:</label>
+                  <input type="tel" id="telefono" name="telefono" class="formulario__input" placeholder="Tu número de teléfono">
+                </div>
+                <div class="formulario__campo">
+                  <label for="mensaje" class="formulario__label">Mensaje:</label>
+                  <textarea id="mensaje" name="mensaje" class="formulario__textarea" placeholder="Tu mensaje"></textarea>
+                </div>
+                <div class="formulario__campo">
+                  <button type="submit" class="formulario__boton">Enviar</button>
+                </div>
+              </form>
+            </div>
+        </section>
 
         <div id="modal-container" class="modal-hidden modal__style">
             <div class="modal-content">

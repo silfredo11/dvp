@@ -80,7 +80,7 @@ document.addEventListener("DOMContentLoaded", () => {
     cards.forEach(card => {
         card.addEventListener("click", (e) => {
             e.preventDefault(); // Previene la navegación si tus cards están dentro de <a>
-            modal.style.display = "block"; // Muestra el modal
+            modal.style.display = "flex"; // Muestra el modal
             // Aquí puedes agregar la lógica para cargar el contenido específico en el modal basado en la card clickeada
         });
     });

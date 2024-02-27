@@ -247,14 +247,14 @@ main {
 
 .main__section--nuestros-servicios {
     padding: 40px;
-    background-color: var(--second-gris-color);
+    background-color: #f7f7f7;
     color: var(--second-white-color); /* Asegura que el texto herede este color, si es necesario */
     position: relative;
 }
 
 .main__section--nuestros-servicios__title {
     font-size: 4.8rem;
-    color: var(--second-white-color);
+    color: var(--principal-black-color);
     margin-bottom: 40px;
     text-align: left; /* Alinea el título a la izquierda */
 }
@@ -508,7 +508,6 @@ main {
     display: none;
 }
 
-
 .modal-content {
     position: fixed;
     top: 0;
@@ -516,14 +515,15 @@ main {
     width: 100%;
     height: 100vh;
     background: white;
-    padding: 40px;
-    display: grid;
+    /* display: grid;
     grid-template-columns: repeat(4, 1fr);
-    grid-template-rows: repeat(4, 1fr); 
-    gap: 20px;
-    overflow-y: auto;
+    grid-template-rows: repeat(4, 1fr);  */
+    /* gap: 20px;
+    overflow-y: auto; */
     z-index: 1000; /* Asegura que el modal esté por encima de otros elementos */
-    max-height: 100vh ;
+    /* max-height: 100vh ;
+    display: flex; */ 
+   
 }
 
 #close-modal {
@@ -540,8 +540,39 @@ main {
     cursor: pointer;
 }
 
-.grid-container {
-    
+
+.grid-item {
+    width: 100%; /* Ajusta el ancho de la imagen al contenedor */
+    height: auto; /* Altura automática para mantener la proporción de la imagen */
+    object-fit: cover; /* Asegura que la imagen cubra el espacio sin deformarse */
+}
+
+.grid-item1{
+    object-fit: cover;
+    order: 1;
+    width: 50%;
+    height: 40vh;
+}
+
+.grid-item2{
+    object-fit: cover;
+    order: 2;
+    width: 50%;
+    height: 40vh;
+}
+
+.grid-item3{
+    object-fit: cover;
+    order: 3;
+    width: 50%;
+    height: 40vh;
+}
+
+.grid-item4{
+    object-fit: cover;
+    order: 4;
+    width: 50%;
+    height: 40vh;
 }
 
 
@@ -549,9 +580,106 @@ main {
 
 .main__section--contacto{
     width: 100%;
-    height: 400px;
-    background-color: green;
+    display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  row-gap: 20px;
 }
+
+.contacto__titulo{
+    color: var(--principal-black-color);
+    font-size: 4.8rem;
+}
+
+.contacto__texto{
+    
+    color: var(--principal-black-color);
+    font-size: 1.6rem;
+    text-align: center;
+    line-height: 1.6;
+}
+
+.main__section--contacto {
+    background-color: #f7f7f7;
+    padding: 50px 0;
+  }
+  
+  .formulario__contenedor {
+    width: 500px;
+    margin: 0 auto;
+    padding: 20px;
+    border: 1px solid #ccc;
+    border-radius: 10px;
+  }
+  
+  .formulario__titulo {
+    text-align: center;
+    margin-bottom: 20px;
+  }
+  
+  .formulario {
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .formulario__campo {
+    margin-bottom: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    width: 100%;
+  }
+  
+  .formulario__label {
+    width: 100%;
+    margin-bottom: 5px;
+    margin-left: 0;
+    font-size: 1.4rem;
+  }
+  
+  .formulario__input,
+  .formulario__textarea {
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    width: 100%;
+    box-sizing: border-box;
+  }
+
+  .formulario__input{
+    width: 100%;
+    height: 40px;
+  }
+  
+  .formulario__textarea {
+    height: 100px;
+  }
+  
+  .formulario__boton {
+    cursor: pointer;
+    background-color: var(--button-color);
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    margin-top: 5px;
+  }
+  
+  .formulario__boton:hover {
+    background-color: #333;
+  }
+  
+  /* Media queries para responsive */
+  
+  @media (max-width: 768px) {
+    .formulario__contenedor {
+      width: 90%;
+    }
+}
+
+
+  
 /* This is the footer section */
 
 .footer {

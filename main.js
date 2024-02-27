@@ -37,9 +37,15 @@ document.addEventListener("DOMContentLoaded", () => {
 
 /*Arrow code */
 
+/* Arrow code */
+
+/* Arrow code */
+
 document.addEventListener("DOMContentLoaded", () => {
     const mainSection = document.querySelector('.main__section--nuestros-servicios');
     const scrollBtns = document.querySelectorAll('.scroll-btn');
+    const container = document.querySelector('.ourService__wrappa');
+    const cardWidth = container.offsetWidth / 2; // Ancho de cada tarjeta (50% del contenedor)
 
     mainSection.addEventListener('mouseover', () => {
         scrollBtns.forEach(btn => {
@@ -52,9 +58,17 @@ document.addEventListener("DOMContentLoaded", () => {
             btn.style.display = 'none';
         });
     });
+
+    document.querySelector('.scroll-btn.left').addEventListener('click', function() {
+        const scrollLeft = Math.max(container.scrollLeft - cardWidth - 60, 0); // Desplazamiento hacia la izquierda, teniendo en cuenta el ancho de la tarjeta y el espacio entre tarjetas
+        container.scrollTo({ left: scrollLeft, behavior: 'smooth' });
+    });
+
+    document.querySelector('.scroll-btn.right').addEventListener('click', function() {
+        const scrollRight = Math.min(container.scrollLeft + cardWidth + 60, container.scrollWidth - container.clientWidth); // Desplazamiento hacia la derecha, teniendo en cuenta el ancho de la tarjeta y el espacio entre tarjetas
+        container.scrollTo({ left: scrollRight, behavior: 'smooth' });
+    });
 });
-
-
 
 
 /* Modal code */
@@ -106,13 +120,4 @@ $(document).ready(function(){
   });
 });
 
-/* Arrow*/ 
-
-document.querySelector('.scroll-btn.left').addEventListener('click', function() {
-    document.querySelector('.ourService__wrappa').scrollBy({ left: -300, behavior: 'smooth' });
-});
-
-document.querySelector('.scroll-btn.right').addEventListener('click', function() {
-    document.querySelector('.ourService__wrappa').scrollBy({ left: 300, behavior: 'smooth' });
-});
 

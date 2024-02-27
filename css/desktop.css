@@ -611,6 +611,7 @@ main {
     padding: 20px;
     border: 1px solid #ccc;
     border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1), 0 6px 20px rgba(0, 0, 0, 0.1);
   }
   
   .formulario__titulo {
@@ -664,10 +665,23 @@ main {
     padding: 10px 20px;
     border-radius: 5px;
     margin-top: 5px;
+    display: block; /* Hace que el botón sea un bloque para permitir márgenes automáticos */
+    margin-left: auto; /* Establece el margen izquierdo a auto */
+    margin-right: auto;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+    width: 160px;
+    height: 40px;
+    font-size: 1.6rem;
   }
   
-  .formulario__boton:hover {
-    background-color: #333;
+  .formulario__boton:hover, .formulario__boton:focus {
+    background-color: #333; /* Color de fondo más oscuro al pasar el ratón por encima */
+    transform: scale(1.05); /* Escala el botón ligeramente para dar sensación de elevación */
+    outline: none; /* Remueve el contorno en foco para navegación con teclado */
+  }
+
+  .formulario__boton:active {
+    transform: scale(0.95); /* Efecto de "presionado" al hacer clic */
   }
   
   /* Media queries para responsive */

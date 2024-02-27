@@ -118,3 +118,14 @@ $(document).ready(function(){
     } // End if
   });
 });
+
+/* Arrow*/ 
+
+document.querySelector('.scroll-btn.left').addEventListener('click', function() {
+    document.querySelector('.ourService__wrappa').scrollBy({ left: -300, behavior: 'smooth' });
+});
+
+document.querySelector('.scroll-btn.right').addEventListener('click', function() {
+    document.querySelector('.ourService__wrappa').scrollBy({ left: 300, behavior: 'smooth' });
+});
+

@@ -248,27 +248,109 @@ main {
 .main__section--nuestros-servicios {
     padding: 40px;
     background-color: #f7f7f7;
-    color: var(--second-white-color); /* Asegura que el texto herede este color, si es necesario */
     position: relative;
-}
-
-.main__section--nuestros-servicios__title {
-    font-size: 4.8rem;
-    color: var(--principal-black-color);
-    margin-bottom: 40px;
-    text-align: left; /* Alinea el título a la izquierda */
-}
-
-.main__section--nuestros-servicios__content {
-    display: flex;
-    overflow: hidden;
-    position: relative;
-    width: calc(100% - 120px); /* Ajusta para las flechas */
-    align-items: center;
-    gap: 30px;
-    width: 100%;
-    transition: transform 0.5s ease;
+    flex-direction: column;
     
+}
+
+.main__section--nuestros-servicios__title{
+    font-size: 3.6rem;
+    color: var(--second-black-color);
+    margin-bottom: 40px;
+
+}
+
+.ourService__wrappa{
+
+    display: flex;
+    gap: 40px;
+    overflow: hidden;
+}
+
+.ourService__card{
+    display: flex;
+    height: 220px;
+    width: 50%;
+    min-width: 50%;
+    gap: 20px;
+}
+.ourService__card--img{
+    width: 40%;
+}
+
+.ourService__card--img img {
+    object-fit: cover;
+    width: 100%;
+    height: 220px;
+}
+
+.ourService__information{
+    width: 60%;
+    padding-top: 20px;
+}
+
+.ourService__information--title{
+    font-size: 2.2rem;
+    color: var(--principal-black-color);
+    margin-bottom: 10px;
+}
+
+.ourService__information--p{
+    font-size: 1.6rem;
+    line-height: 1.6;
+    color: var(--second-black-color);
+}
+
+/* Arrow code*/
+
+.scroll-btn {
+    position: absolute;
+    top: 60%;
+    transform: translateY(-50%);
+    z-index: 10;
+    background-color: var(--button-color); /* Cambia esto según el esquema de colores de tu sitio */
+    color: var(--principal-black-color); /* Asume que tienes esta variable de color */
+    border: none;
+    cursor: pointer;
+    width: 60px;
+    height: 60px;
+    border-radius: 50%; /* Botones circulares */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 30px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Sombra suave */
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.scroll-btn:hover {
+    transform: translateY(-50%) scale(1.1); /* Efecto de levitación y crecimiento */
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3); /* Sombra más pronunciada al hacer hover */
+}
+
+.scroll-btn.left {
+    left: 10px; /* Ajusta según necesidad */
+}
+
+.scroll-btn.right {
+    right: 10px; /* Ajusta según necesidad */
+}
+
+.ourService__wrappa {
+    overflow-x: scroll; /* Permite desplazamiento horizontal */
+    scroll-behavior: smooth;
+    display: flex;
+    gap: 40px;
+}
+
+/* Ocultar scrollbar para una apariencia limpia */
+.ourService__wrappa::-webkit-scrollbar {
+    display: none;
+}
+
+.ourService__wrappa {
+    -ms-overflow-style: none; /* IE and Edge */
+    scrollbar-width: none; /* Firefox */
 }
 
 

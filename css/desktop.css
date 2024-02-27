@@ -304,6 +304,7 @@ main {
 /* Arrow code*/
 
 .scroll-btn {
+    display: none;
     position: absolute;
     top: 60%;
     transform: translateY(-50%);
@@ -315,7 +316,7 @@ main {
     width: 60px;
     height: 60px;
     border-radius: 50%; /* Botones circulares */
-    display: flex;
+    
     align-items: center;
     justify-content: center;
     font-size: 30px;
@@ -326,6 +327,10 @@ main {
 .scroll-btn:hover {
     transform: translateY(-50%) scale(1.1); /* Efecto de levitación y crecimiento */
     box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3); /* Sombra más pronunciada al hacer hover */
+}
+
+.main__section--nuestros-servicios:focus .scroll-btn {
+    display: flex;
 }
 
 .scroll-btn.left {

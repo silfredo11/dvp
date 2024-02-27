@@ -37,37 +37,24 @@ document.addEventListener("DOMContentLoaded", () => {
 
 /*Arrow code */
 
-document.addEventListener('DOMContentLoaded', function() {
-    // Inicialmente, solo la flecha derecha es visible.
-    document.getElementById('arrow-left').style.display = 'none';
-    document.getElementById('arrow-right').style.display = 'flex';
+document.addEventListener("DOMContentLoaded", () => {
+    const mainSection = document.querySelector('.main__section--nuestros-servicios');
+    const scrollBtns = document.querySelectorAll('.scroll-btn');
+
+    mainSection.addEventListener('mouseover', () => {
+        scrollBtns.forEach(btn => {
+            btn.style.display = 'block';
+        });
+    });
+
+    mainSection.addEventListener('mouseout', () => {
+        scrollBtns.forEach(btn => {
+            btn.style.display = 'none';
+        });
+    });
 });
 
-document.getElementById('arrow-right').addEventListener('click', function() {
-    // Muestra la cuarta card y ajusta la visibilidad de las flechas
-    scrollCards('right');
-    document.getElementById('arrow-left').style.display = 'flex';
-    this.style.display = 'none'; // Oculta la flecha derecha
-});
 
-document.getElementById('arrow-left').addEventListener('click', function() {
-    // Ajusta la visibilidad de las flechas al volver a la posición original
-    scrollCards('left');
-    document.getElementById('arrow-right').style.display = 'flex';
-    this.style.display = 'none'; // Oculta la flecha izquierda
-});
-
-function scrollCards(direction) {
-    const container = document.querySelector('.main__section--nuestros-servicios__content');
-    const cardWidth = document.querySelector('.card').offsetWidth;
-    const gap = parseInt(getComputedStyle(document.querySelector('.card')).marginRight);
-
-    // Calcula el nuevo desplazamiento basado en la dirección
-    let newScrollPosition = container.scrollLeft + (direction === 'right' ? (cardWidth + gap) : -(cardWidth + gap));
-
-    // Aplica el desplazamiento
-    container.scroll({ left: newScrollPosition, behavior: 'smooth' });
-}
 
 
 /* Modal code */

@@ -160,6 +160,14 @@ main {
     margin-bottom: 20px;
 }
 
+.main__section--presentacion-logo{
+    width: 80%;
+    height: 60vh;
+    margin-bottom: 10px;
+}
+
+
+
 .main__section--presentacion h1 {
     font-size: 6.4rem;
     color: var(--principal-black-color);
@@ -171,7 +179,7 @@ main {
     line-height: 1.6;
 }
 
-.main__section--presentacion a {
+.contact-button {
     display: inline-block;
     background-color: var(--button-color);
     color: var(--second-white-color);
@@ -190,10 +198,7 @@ main {
     transform: scale(1.1); /* Aumenta el tamaño ligeramente */
 }
 
-.main__section--presentacion img {
-    width: 80%;
-    height: 500px;
-}
+
 
 /*Here star main__section--quienessomos*/
 

@@ -754,7 +754,12 @@ main {
 }
 
 .footer__column {
-    /* Estilos opcionales para los divs de las columnas */
+    display: flex; /* Esto habilita Flexbox para este contenedor */
+    flex-direction: column; /* Organiza los hijos en una columna */
+    align-items: center; /* Centra los elementos hijos horizontalmente */
+    justify-content: center; /* Centra los elementos hijos verticalmente */
+    text-align: center; /* Asegura que el texto también esté centrado */
+    height: 100%; 
 }
 
 .footer__title {
@@ -770,4 +775,31 @@ main {
     font-style: italic;
     text-align: center;
 
+}
+
+.footer__column--icons {
+    display: flex;
+  flex-direction: column;
+  justify-content: flex-start; /* Mantiene h3 en la parte superior */
+  align-items: center;
+  
+
+} 
+
+.footer__icons-father{
+   
+  display: flex;
+  justify-content: center; /* Centra los íconos horizontalmente */
+  align-items: center;
+}
+
+.footer__icons-father a{
+    width: 40px;
+    height: 40px;
+    margin-left: 5px;
+}
+
+.footer__icons-father a img{
+    width: 40px;
+    height: 40px;
 }

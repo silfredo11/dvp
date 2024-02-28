@@ -148,7 +148,7 @@ main {
 /*This part is main section presentation*/
 
 .main__section--presentacion {
-    padding: 0 90px 90px 90px;
+    padding: 0 90px 40px 90px;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -165,8 +165,6 @@ main {
     height: 60vh;
     margin-bottom: 10px;
 }
-
-
 
 .main__section--presentacion h1 {
     font-size: 6.4rem;
@@ -198,7 +196,10 @@ main {
     transform: scale(1.1); /* Aumenta el tamaño ligeramente */
 }
 
-
+.youtube-video{
+    width: 60%;
+    height: 60vh;
+}
 
 /*Here star main__section--quienessomos*/
 

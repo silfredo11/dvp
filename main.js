@@ -73,23 +73,6 @@ document.addEventListener("DOMContentLoaded", () => {
 
 /* Modal code */
 
-document.addEventListener("DOMContentLoaded", () => {
-    const cards = document.querySelectorAll(".card");
-    const modal = document.getElementById("modal-container");
-    const closeModal = document.getElementById("close-modal");
-
-    cards.forEach(card => {
-        card.addEventListener("click", (e) => {
-            e.preventDefault(); // Previene la navegación si tus cards están dentro de <a>
-            modal.style.display = "flex"; // Muestra el modal
-            // Aquí puedes agregar la lógica para cargar el contenido específico en el modal basado en la card clickeada
-        });
-    });
-
-    closeModal.addEventListener("click", () => {
-        modal.style.display = "none"; // Oculta el modal
-    });
-});
 
 
 /* Scroll- smoot */

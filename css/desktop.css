@@ -558,7 +558,7 @@ main {
 /* Modal code */
 
 
-
+/* Estilos para el modal */
 
 /* Main section contacto */
 
@@ -739,4 +739,97 @@ main {
 .footer__icons-father a img{
     width: 40px;
     height: 40px;
+}
+
+/* Here start the code to arroyo */
+
+
+.main--fotos{
+    width: 100%;
+    height: 100vh;
+    margin-top: 0;
+    display: flex; /* Usa flexbox para centrar la sección de la grid */
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+   
+}
+
+.grid-section {
+    display: grid;
+    width: 100%; /* Ancho al 100% del contenedor */
+    height: 100%; /* Altura al 100% del contenedor */
+    grid-template-columns: repeat(4, 1fr); /* 4 columnas */
+    grid-template-rows: repeat(4, 1fr); /* 4 filas */
+    gap: 20px; /* Espacio entre grid items */
+}
+
+.grid-section__item:nth-child(1) { 
+    background-color: #ffcccc;
+    grid-area: 1 / 1 / 3 / 3;
+    background-image: url('https://media.istockphoto.com/id/1441270858/es/foto/vista-superior-de-la-reuni%C3%B3n-de-ingenieros-arquitectos-contratistas-y-capataz-en-el-sitio-de.jpg?s=1024x1024&w=is&k=20&c=rfGAK6ORK20ZsE6eSby5KnJxhkBpzPsPIhAsafKVyFA=');
+    background-size: cover; /* Asegura que la imagen cubra completamente el div sin distorsionarse */
+    background-position: center; /* Centra la imagen en el div */
+    background-repeat: no-repeat;
+    
+} /* Rojo claro */
+
+.grid-section__item:nth-child(2) { 
+    background-color: #ccffcc;
+    grid-area: 1 / 3 / 3 /5;
+} /* Verde claro */
+
+.grid-section__item:nth-child(3) {
+     background-color: #ccccff; 
+     grid-area: 3 / 1 / 5 / 3;
+} /* Azul claro */
+.grid-section__item:nth-child(4) {
+     background-color: #ffffcc; 
+     grid-area: 3 / 3 / 5 / 5;
+}
+
+.grid-section__item {
+    /* Estilos para los elementos de la grid */
+    background-color: #f0f0f0; /* Color de fondo ligero para los items */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 1px solid #d0d0d0; /* Borde sutil */
+}
+
+/* Haciendo la grid responsive */
+@media (max-width: 768px) {
+    .grid-section {
+        grid-template-columns: repeat(2, 1fr); /* 2 columnas en pantallas pequeñas */
+    }
+}
+
+@media (max-width: 480px) {
+    .grid-section {
+        grid-template-columns: 1fr; /* 1 columna en pantallas muy pequeñas */
+    }
+}
+
+.close-button {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 60px;
+    height: 60px;
+    background-color: var(--button-color);
+    color: white;
+    font-size: 24px; /* Ajusta este valor según necesites */
+    font-weight: bold;
+    border-radius: 50%;
+    position: fixed;
+    top: 20px; /* Distancia desde la parte superior de la pantalla */
+    right: 20px; /* Distancia desde la parte derecha de la pantalla */
+    text-decoration: none;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3); /* Sombra para efecto flotante */
+    transition: transform 0.3s ease, box-shadow 0.3s ease; /* Transición suave para hover */
+}
+
+.close-button:hover {
+    transform: scale(1.1); /* Efecto de crecimiento al pasar el mouse */
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.5); /* Sombra más pronunciada para efecto flotante */
 }

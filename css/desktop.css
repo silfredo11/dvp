@@ -101,13 +101,13 @@ header {
     display: flex;
     align-items: center;
     justify-content: flex-start; /* Alinea los elementos al inicio, manteniendo el logo a la izquierda */
-    padding: 30px;
     background-color: var(--white-color);
     font-size: 1.6rem;
     position: fixed; /* Hace que el header sea fijo */
     top: 0; /* Alinea el header en la parte superior */
     width: 100%; /* Asegura que el header tenga un ancho completo */
     z-index: 1000;
+    height: 100px;
 }
 
 .contenedor-logo img {
@@ -121,6 +121,18 @@ nav {
     display: flex;
     justify-content: center; /* Centra los enlaces dentro del nav */
     flex-grow: 1; /* Permite que el nav ocupe todo el espacio restante */
+    height: 100%;
+    align-items: center;
+}
+
+.nav__a{
+    background-color: var(--button-color);
+    height: 100%;
+    display: flex;
+    align-items: center;
+    color: var(--white-color);
+    width: 80px;
+    justify-content: center;
 }
 
 nav a {
@@ -253,15 +265,15 @@ main {
 
 .main__section--nuestros-servicios {
     padding: 40px;
-    background-color: #f7f7f7;
     position: relative;
     flex-direction: column;
+    background-color: var(--button-color);
     
 }
 
 .main__section--nuestros-servicios__title{
     font-size: 3.6rem;
-    color: var(--second-black-color);
+    color: var(--white-color);
     margin-bottom: 40px;
 
 }
@@ -297,14 +309,14 @@ main {
 
 .ourService__information--title{
     font-size: 2.2rem;
-    color: var(--principal-black-color);
+    color: var(--white-color);
     margin-bottom: 10px;
 }
 
 .ourService__information--p{
     font-size: 1.6rem;
     line-height: 1.6;
-    color: var(--second-black-color);
+    color: var(--white-color);
 }
 
 /* Arrow code*/
@@ -315,14 +327,13 @@ main {
     top: 60%;
     transform: translateY(-50%);
     z-index: 10;
-    background-color: var(--button-color); /* Cambia esto según el esquema de colores de tu sitio */
+    background-color: red; /* Cambia esto según el esquema de colores de tu sitio */
     color: var(--principal-black-color); /* Asume que tienes esta variable de color */
     border: none;
     cursor: pointer;
     width: 60px;
     height: 60px;
     border-radius: 50%; /* Botones circulares */
-    
     align-items: center;
     justify-content: center;
     font-size: 30px;
@@ -541,8 +552,8 @@ main {
     grid-template-columns: repeat(3, 1fr); /* Crea 3 columnas de igual tamaño */
     grid-template-rows: repeat(3, auto); /* Crea 3 filas que se ajustan al contenido */
     gap: 20px; /* Espacio entre filas y columnas */
-    padding: 0 40px 40px 40px; /* Espacio alrededor del contenido dentro de la sección */
-    background-color: white; /* Color de fondo de la sección */
+    padding: 40px 40px 40px 40px; /* Espacio alrededor del contenido dentro de la sección */
+    background-color: var(--second-gris-color); /* Color de fondo de la sección */
 }
 
 .card__transition{

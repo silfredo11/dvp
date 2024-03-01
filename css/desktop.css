@@ -546,7 +546,7 @@ nav a.active {
     overflow: hidden;
     white-space: nowrap;
     width: 100%;
-    height: 60px;
+    height: 100px;
     padding: 0 80px 0 0;
     background-color: var(--white-color);
     margin-top: 20px;
@@ -556,28 +556,78 @@ nav a.active {
 .empresas-fijo {
     margin-right: 30px; /* Espacio antes de la cinta corredora */
     color: var(--principal-black-color);
-    font-size: 2rem;
+    font-size: 3rem;
     font-weight: 700;
     font-style: italic;
     z-index: 2;
     background-color: var(--white-color);
-    padding: 0 20px 0 40px;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    padding: 0 40px 0 40px;
+    /* padding: 0 20px 0 40px; */
 }
 
 .empresas-desplazamiento {
     display: inline-block;
-    animation: desplazamiento 20s linear infinite; /* Ajusta la duración según la necesidad */
+    animation: desplazamiento 5s linear infinite; /* Ajusta la duración según la necesidad */
     color: var(--button-color);
     font-size: 2rem;
     font-weight: 700;
     z-index: 1;
-    
+}
+
+.empresas-desplazamiento__span{
+    display: inline-block;
+    margin-right: 40px; /* Espacio entre nombres de empresas */
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    width: 240px;
+    height: 60px;
+}
+
+.empresas-desplazamiento__span1{
+    background-image: url("https://sf.ezoiccdn.com/ezoimgfmt/www.vectorlogo.es/wp-content/uploads/2022/06/logo-vector-gobernacion-de-antioquia.jpg?ezimgfmt=ng%3Awebp%2Fngcb1%2Frs%3Adevice%2Frscb1-1");
     
 }
 
-.empresas-desplazamiento span {
-    margin-right: 30px; /* Espacio entre nombres de empresas */
+.empresas-desplazamiento__span3 {
+    background-image: url("https://www.barranquilla.gov.co/wp-content/themes/barranquilla/assets/img/logo.svg");
+    
 }
+
+
+.empresas-desplazamiento__span5 {
+    background-image: url("https://www.edu.gov.co/images/logoedu.png");
+    
+}
+
+.empresas-desplazamiento__span6 {
+    background-image: url("https://iconape.com/wp-content/png_logo_vector/mindeporte-colombia.png");
+    
+}
+
+.empresas-desplazamiento__span7 {
+    background-image: url("https://www.enterritorio.gov.co/web/sites/default/files/vida1_1.png");
+    
+}
+
+
+.empresas-desplazamiento__span2{
+    background-image: url("https://www.atlantico.gov.co/images/botones/Logo_Gob_Atl-2024.png");
+    
+}
+
+
+
+.empresas-desplazamiento__span4 {
+    background-image: url("https://www.invias.gov.co/images/logos/logo_invias_nuevo.jpg");
+    
+}
+
+
+
 
 @keyframes desplazamiento {
     from {

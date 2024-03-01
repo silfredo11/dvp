@@ -27,18 +27,36 @@ window.addEventListener("load", () => {
   }
 
   function adjustHeaderPosition() {
-      const headerSecundario = document.querySelector('.main__section--presentacion--header');
-      const mainSectionPresentacion = document.querySelector('.main__section--presentacion');
-      const offsetTopPresentacion = mainSectionPresentacion.offsetTop + mainSectionPresentacion.offsetHeight;
-
-      if (window.pageYOffset > offsetTopPresentacion) {
-          headerSecundario.style.position = 'fixed';
-          headerSecundario.style.top = '0';
-      } else {
-          headerSecundario.style.position = 'absolute'; // O "static" si quieres que vuelva completamente al flujo normal
-          headerSecundario.style.top = 'auto';
-      }
+    const headerSecundario = document.querySelector('.main__section--presentacion--header');
+    const mainSectionPresentacion = document.querySelector('.main__section--presentacion');
+    const offsetTopPresentacion = mainSectionPresentacion.offsetTop + mainSectionPresentacion.offsetHeight;
+  
+    if (window.pageYOffset > offsetTopPresentacion) {
+      headerSecundario.style.position = 'fixed';
+      headerSecundario.style.top = '0';
+      headerSecundario.style.width = "100%";
+      headerSecundario.classList.add("header-fijo");
+    } else {
+      headerSecundario.style.position = 'absolute'; // O 'static', dependiendo de tu layout inicial.
+      headerSecundario.style.top = '0'; // Asegúrate de ajustar esto según sea necesario.
+      headerSecundario.classList.remove("header-fijo");
+    }
   }
+  
+  // Implementa debounce para optimizar el rendimiento durante el scroll.
+  let timer;
+  window.onscroll = () => {
+    clearTimeout(timer);
+    timer = setTimeout(() => {
+      adjustHeaderPosition();
+    }, 10); // Ajusta este tiempo según sea necesario.
+  };
+  
+  // Asegúrate de llamar a adjustHeaderPosition al cargar la página para establecer la posición inicial correcta.
+  window.onload = () => {
+    adjustHeaderPosition();
+  };
+  
 
   // Integración del código de smooth scroll
   // Asegúrate de que jQuery esté incluido si usas esta parte

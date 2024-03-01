@@ -175,6 +175,16 @@ nav a.active {
     position: relative;
 }
 
+.header-fijo {
+    background-color: white;
+    color: black; /* Este estilo aplicará a los textos directamente dentro del header, pero no necesariamente a los links */
+}
+
+.header-fijo .nav__a {
+    color: black; /* Asegura que los links dentro del nav tengan texto negro */
+}
+
+
 .main__section--presentacion--background{
     width: 100%;
     height: 100vh;

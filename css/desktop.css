@@ -107,14 +107,13 @@ header {
     top: 0; /* Alinea el header en la parte superior */
     width: 100%; /* Asegura que el header tenga un ancho completo */
     z-index: 1000;
-    height: 100px;
+    height: 130px;
 }
 
 .contenedor-logo img {
-    width: 40px; /* Establece el ancho del logo */
-    height: 40px; /* Establece la altura del logo */
-    border-radius: 50%; /* Hace que el logo sea redondo */
-    object-fit: cover; /* Asegura que la imagen cubra el espacio sin deformarse */
+    width: 260px; 
+    height: 80%; 
+    margin-left: 60px;
 }
 
 nav {
@@ -126,12 +125,8 @@ nav {
 }
 
 .nav__a{
-    background-color: var(--button-color);
-    height: 100%;
+  
     display: flex;
-    align-items: center;
-    color: var(--white-color);
-    width: 80px;
     justify-content: center;
 }
 
@@ -146,8 +141,11 @@ nav a:hover {
 }
 
 nav a.active {
-    border-bottom: 2px solid var(--button-color); /* Añade una línea debajo del enlace activo */
-    padding-bottom: 5px; /* Opcional: Ajusta el padding para que el texto no esté demasiado cerca de la línea */
+    background-color: var(--button-color);
+    align-items: center;
+    color: var(--white-color);
+    width: 100px;
+    height: 100%;
 }
 
 

@@ -1,38 +1,47 @@
-document.addEventListener("DOMContentLoaded", () => {
-    const sections = document.querySelectorAll("section");
-    const navLinks = document.querySelectorAll("nav a");
+window.addEventListener("load", () => { // Cambio de `DOMContentLoaded` a `load`
+  const sections = document.querySelectorAll("section");
+  const navLinks = document.querySelectorAll("nav a");
 
-    function activateLink(currentId) {
-        navLinks.forEach((link) => {
-            link.classList.remove("active");
-            if (link.getAttribute("href") === `#${currentId}`) {
-                link.classList.add("active");
-            }
-        });
-    }
+  function activateLink(currentId) {
+      navLinks.forEach(link => {
+          link.classList.remove("active");
+          if (link.getAttribute("href") === `#${currentId}`) {
+              link.classList.add("active");
+          }
+      });
+  }
 
-    window.onscroll = () => {
-        let currentSectionId = ""; // Inicialmente no hay ninguna sección activa
-        sections.forEach((section) => {
-            const sectionTop = section.offsetTop;
-            if (pageYOffset >= sectionTop - 50) {
-                currentSectionId = section.getAttribute("id");
-            }
-        });
+  function getCurrentSection() {
+      let currentSectionId = '';
+      let currentSectionPos = 0;
+      sections.forEach(section => {
+          const sectionTop = section.getBoundingClientRect().top + window.scrollY;
+          if (window.scrollY >= sectionTop - 100) { // Ajuste en el margen de activación
+              if (window.scrollY >= currentSectionPos) {
+                  currentSectionId = section.getAttribute("id");
+                  currentSectionPos = sectionTop;
+              }
+          }
+      });
+      return currentSectionId;
+  }
 
-        if (currentSectionId) {
-            activateLink(currentSectionId);
-        } else {
-            // Si no hay ninguna sección que cumpla el criterio, activar por defecto el primer enlace
-            // Esto asume que el primer enlace es 'Home' o el inicio de tu sitio.
-            const firstSectionId = sections[0].getAttribute("id");
-            activateLink(firstSectionId);
-        }
-    };
+  window.onscroll = () => {
+      const currentSectionId = getCurrentSection();
+      if (currentSectionId) {
+          activateLink(currentSectionId);
+      }
+  };
 
-    // Activa el primer enlace al cargar la página si está en la parte superior
-    activateLink(sections[0].getAttribute("id"));
+  // Activar el enlace correspondiente al cargar la página o al recargar en una sección específica
+  const initialSectionId = getCurrentSection();
+  if (initialSectionId) {
+      activateLink(initialSectionId);
+  } else {
+      activateLink(sections[0].getAttribute("id"));
+  }
 });
+
 
 
 

@@ -86,4 +86,29 @@ window.addEventListener("load", () => {
   adjustHeaderPosition();
 });
 
+document.addEventListener("DOMContentLoaded", () => {
+  const wrapper = document.querySelector('.ourService__wrappa');
+  const cards = document.querySelectorAll('.ourService__card');
+  const btnLeft = document.querySelector('.scroll-btn.left');
+  const btnRight = document.querySelector('.scroll-btn.right');
+
+  if(cards.length > 0) {
+    // Asume que todas las tarjetas tienen el mismo ancho y el contenedor un width fijo o máximo.
+    const cardStyle = getComputedStyle(cards[0]);
+    const cardMarginRight = parseFloat(cardStyle.marginRight);
+    // Añade un extra al ancho de la tarjeta para asegurar que se muestre completamente la siguiente.
+    const extraSpace = 40; // Ajusta este valor según sea necesario para cubrir el gap completo y un poco más.
+    const cardWidth = cards[0].offsetWidth + cardMarginRight + extraSpace; // Añade el margen y el espacio extra al ancho de la tarjeta
+
+    btnLeft.addEventListener('click', () => {
+      wrapper.scrollLeft -= cardWidth; // Usa el ancho calculado de la tarjeta más el espacio extra
+    });
+
+    btnRight.addEventListener('click', () => {
+      wrapper.scrollLeft += cardWidth; // Usa el ancho calculado de la tarjeta más el espacio extra
+    });
+  }
+});
+
+
 

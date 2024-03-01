@@ -361,8 +361,8 @@ nav a.active {
     top: 60%;
     transform: translateY(-50%);
     z-index: 10;
-    background-color: red; /* Cambia esto según el esquema de colores de tu sitio */
-    color: var(--principal-black-color); /* Asume que tienes esta variable de color */
+    background-color: var(--second-white-color); /* Cambia esto según el esquema de colores de tu sitio */
+    color: var(--button-color); /* Asume que tienes esta variable de color */
     border: none;
     cursor: pointer;
     width: 60px;
@@ -396,7 +396,7 @@ nav a.active {
     overflow-x: scroll; /* Permite desplazamiento horizontal */
     scroll-behavior: smooth;
     display: flex;
-    gap: 40px;
+    gap: 20px;
 }
 
 /* Ocultar scrollbar para una apariencia limpia */
@@ -408,6 +408,12 @@ nav a.active {
     -ms-overflow-style: none; /* IE and Edge */
     scrollbar-width: none; /* Firefox */
 }
+
+/* En lugar de utilizar :focus, usa :hover para revelar los botones */
+.main__section--nuestros-servicios:hover .scroll-btn {
+    display: flex;
+}
+
 
 
 /* Animation cards */

@@ -152,7 +152,7 @@ nav a.active {
 /* This is the main section */
 
 main {
-    margin-top: 144px; /* Ajusta este valor según la altura real de tu header */
+    margin-top: 108px; /* Ajusta este valor según la altura real de tu header */
 }
 
 /*This part is main section presentation*/
@@ -164,6 +164,22 @@ main {
     align-items: center;
     justify-content: center;
     text-align: center;
+    width: 100%;
+    height: 82vh;
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-image: url("https://images.pexels.com/photos/1238864/pexels-photo-1238864.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1");
+    position: relative;
+}
+
+.main__section--presentacion--background{
+    width: 100%;
+    height: 82vh;
+    background-color: var(--button-color);
+    top: 0;
+    position: absolute;
+    opacity: 0.6;
 }
 
 .main__section--presentacion--son{
@@ -178,13 +194,14 @@ main {
 
 .main__section--presentacion h1 {
     font-size: 6.4rem;
-    color: var(--principal-black-color);
+    color: var(--white-color);
 }
 
 .main__section--presentacion p {
-    font-size: 1.6rem;
-    color: var(--principal-black-color);
+    font-size: 2.2rem;
+    color: var(--white-color);
     line-height: 1.6;
+    font-weight: 500;
 }
 
 .contact-button {
@@ -194,10 +211,11 @@ main {
     padding: 20px 80px; /* Ajustado para un alto de 60px y ancho de 30px de texto */
     text-decoration: none;
     border-radius: 5px; /* Opcional: añade redondeo a tu botón */
-    font-size: 1.6rem;
+    font-size: 1.8rem;
     margin-bottom: 60px;
     border-radius: 5px; /* Opcional: añade redondeo a tu botón */
     transition: background-color 0.3s ease, color 0.3s ease;
+    font-weight: 500;
 }
 
 .main__section--presentacion .contact-button:hover {

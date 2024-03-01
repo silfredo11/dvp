@@ -181,7 +181,9 @@ nav a.active {
 }
 
 .header-fijo .nav__a {
-    color: black; /* Asegura que los links dentro del nav tengan texto negro */
+    color: var(--principal-black-color); /* Asegura que los links dentro del nav tengan texto negro */
+    font-weight: 300;
+    font-size: 1.6rem;
 }
 
 
@@ -302,12 +304,13 @@ nav a.active {
     position: relative;
     flex-direction: column;
     background-color: var(--button-color);
+    width: 100%;
     
 }
 
 .main__section--nuestros-servicios__title{
     font-size: 3.6rem;
-    color: var(--white-color);
+    color: var(--second-black-color);
     margin-bottom: 40px;
 
 }
@@ -315,13 +318,13 @@ nav a.active {
 .ourService__wrappa{
 
     display: flex;
-    gap: 40px;
+    gap: 20px;
     overflow: hidden;
 }
 
 .ourService__card{
     display: flex;
-    height: 220px;
+    height: 260px;
     width: 50%;
     min-width: 50%;
     gap: 20px;
@@ -343,14 +346,14 @@ nav a.active {
 
 .ourService__information--title{
     font-size: 2.2rem;
-    color: var(--white-color);
+    color: var(--second-black-color);
     margin-bottom: 10px;
 }
 
 .ourService__information--p{
     font-size: 1.6rem;
     line-height: 1.6;
-    color: var(--white-color);
+    color: var(--second-black-color);
 }
 
 /* Arrow code*/

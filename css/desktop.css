@@ -100,26 +100,26 @@ html{
 header {
     display: flex;
     align-items: center;
-    justify-content: flex-start; /* Alinea los elementos al inicio, manteniendo el logo a la izquierda */
+    justify-content: space-between; /* Alinea los elementos al inicio, manteniendo el logo a la izquierda */
     background-color: var(--white-color);
     font-size: 1.6rem;
     position: fixed; /* Hace que el header sea fijo */
     top: 0; /* Alinea el header en la parte superior */
     width: 100%; /* Asegura que el header tenga un ancho completo */
     z-index: 1000;
-    height: 130px;
+    height: 100px;
+    height: 18vh;
+    padding: 0 40px 0 40px;
 }
 
 .contenedor-logo img {
-    width: 260px; 
+    width: 180px; 
     height: 80%; 
-    margin-left: 60px;
 }
 
 nav {
     display: flex;
-    justify-content: center; /* Centra los enlaces dentro del nav */
-    flex-grow: 1; /* Permite que el nav ocupe todo el espacio restante */
+    justify-content: center;
     height: 100%;
     align-items: center;
 }

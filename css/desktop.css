@@ -220,7 +220,7 @@ nav a.active {
     color: var(--white-color);
     line-height: 1.6;
     font-weight: 500;
-    top: 260px;
+    top: 280px;
 }
 
 .contact-button {
@@ -235,7 +235,7 @@ nav a.active {
     border-radius: 5px; /* Opcional: añade redondeo a tu botón */
     transition: background-color 0.3s ease, color 0.3s ease;
     font-weight: 500;
-    top: 340px;
+    top: 360px;
 }
 
 .main__section--presentacion .contact-button:hover {

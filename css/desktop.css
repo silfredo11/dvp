@@ -868,28 +868,30 @@ nav a.active {
     gap: 20px; /* Espacio entre grid items */
 }
 
-.grid-section__item:nth-child(1) { 
-    background-color: #ffcccc;
-    grid-area: 1 / 1 / 3 / 3;
-    background-image: url('https://media.istockphoto.com/id/1441270858/es/foto/vista-superior-de-la-reuni%C3%B3n-de-ingenieros-arquitectos-contratistas-y-capataz-en-el-sitio-de.jpg?s=1024x1024&w=is&k=20&c=rfGAK6ORK20ZsE6eSby5KnJxhkBpzPsPIhAsafKVyFA=');
+.grid-section__item{ 
     background-size: cover; /* Asegura que la imagen cubra completamente el div sin distorsionarse */
     background-position: center; /* Centra la imagen en el div */
     background-repeat: no-repeat;
+}
+
+.grid-section__item:nth-child(1) { 
+    grid-area: 1 / 1 / 3 / 3;
+    background-image: url('https://i.ibb.co/WDg34vb/calle-91-1.jpg');
     
-} /* Rojo claro */
+} 
 
 .grid-section__item:nth-child(2) { 
-    background-color: #ccffcc;
     grid-area: 1 / 3 / 3 /5;
-} /* Verde claro */
+    background-image: url('https://i.ibb.co/yfcZd10/calle-91-canalizacion-2.jpg');
+} 
 
 .grid-section__item:nth-child(3) {
-     background-color: #ccccff; 
      grid-area: 3 / 1 / 5 / 3;
-} /* Azul claro */
+     background-image: url('https://i.ibb.co/G0tPsPM/la-3.jpg');
+} 
 .grid-section__item:nth-child(4) {
-     background-color: #ffffcc; 
      grid-area: 3 / 3 / 5 / 5;
+     background-image: url('https://i.ibb.co/dLMFRdD/4-la-4.jpg');
 }
 
 .grid-section__item {
@@ -936,4 +938,45 @@ nav a.active {
 .close-button:hover {
     transform: scale(1.1); /* Efecto de crecimiento al pasar el mouse */
     box-shadow: 0 6px 12px rgba(0, 0, 0, 0.5); /* Sombra más pronunciada para efecto flotante */
+}
+
+/* Grid section complejo deportivo de Manati */
+
+.grid-section__item--Manati:nth-child(1) {
+    grid-area: 1 / 1 / 3 / 3;
+    background-image: url('https://i.ibb.co/7QVtfx8/Complejo-deportivo-Manati.jpg');
+}
+
+.grid-section__item--Manati:nth-child(2) {
+    grid-area: 1 / 3 / 3 /5;
+    background-image: url('https://i.ibb.co/QpKJryz/Manati-1.jpg');
+}
+
+.grid-section__item--Manati:nth-child(3) {
+    grid-area: 3 / 1 / 5 / 3;
+    background-image: url('https://i.ibb.co/Vx3hTg1/Manati-2.jpg');
+}
+
+.grid-section__item--Manati:nth-child(4) {
+    grid-area: 3 / 3 / 5 / 5;
+    background-image: url('https://i.ibb.co/MZ6zh43/Manati-3.jpg');
+}
+
+/* Grid section Variante Sabalarga */
+
+.grid-section__item3:nth-child(1) {
+    grid-area: 1 / 1 / 5 / 3;
+    background-image: url('https://i.ibb.co/xgP3tB6/variante-Sabanalarga.jpg');
+}
+
+.grid-section__item3:nth-child(2) {
+    grid-area: 1 / 3 / 5 /5;
+    background-image: url('https://i.postimg.cc/SxKCpsfj/sabanalarga.jpg');
+}
+
+/* Grid Estadio Riohacha */
+
+.grid-section__item--estadioRioacha:nth-child(1) {
+    grid-area: 1 / 1 / 5 / 5;
+    background-image: url('https://i.postimg.cc/g0tPBMkn/Estadio-Riohacha-2022.jpg');
 }

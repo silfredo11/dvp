@@ -965,18 +965,111 @@ nav a.active {
 /* Grid section Variante Sabalarga */
 
 .grid-section__item3:nth-child(1) {
-    grid-area: 1 / 1 / 5 / 3;
+    grid-area: 1 / 1 / 3 / 3;
     background-image: url('https://i.ibb.co/xgP3tB6/variante-Sabanalarga.jpg');
 }
 
 .grid-section__item3:nth-child(2) {
-    grid-area: 1 / 3 / 5 /5;
-    background-image: url('https://i.postimg.cc/SxKCpsfj/sabanalarga.jpg');
+    grid-area: 1 / 3 / 3 /5;
+    background-image: url('https://i.postimg.cc/85JMFPyw/pav-sabanalarga-1.jpg');
 }
 
+.grid-section__item3:nth-child(3) {
+    grid-area: 3 / 1 / 5 / 3;
+    background-image: url('https://i.postimg.cc/q7p3Gx1t/pav-sabanalarga-2.jpg');
+}
+
+.grid-section__item3:nth-child(4) {
+    grid-area: 3 / 3 / 5 /5;
+    background-image: url('https://i.postimg.cc/kDrVRQVg/pav-sabanalarga-4.jpg');
+}
 /* Grid Estadio Riohacha */
 
 .grid-section__item--estadioRioacha:nth-child(1) {
     grid-area: 1 / 1 / 5 / 5;
     background-image: url('https://i.postimg.cc/g0tPBMkn/Estadio-Riohacha-2022.jpg');
 }
+
+/* Plaza Usiacuri - Puerto colombia */
+
+.grid-section__item--usiacuri:nth-child(1) {
+    grid-area: 1 / 1 / 3 / 3;
+    background-image: url('https://i.postimg.cc/RVjhgLZS/plaza-pto-colombia-1.jpg');
+}
+
+.grid-section__item--usiacuri:nth-child(2) {
+    grid-area: 1 / 3 / 3 /5;
+    background-image: url('https://i.postimg.cc/L8t9NdWD/plaza-pto-colombia-2.jpg');
+}
+
+.grid-section__item--usiacuri:nth-child(3) {
+    grid-area: 3 / 1 / 5 / 3;
+    background-image: url('https://i.postimg.cc/xjL90Vf2/plaza-pto-colombia-6.jpg');
+}
+
+.grid-section__item--usiacuri:nth-child(4) {
+    grid-area: 3 / 3 / 5 / 5;
+    background-image: url('https://i.postimg.cc/Vkg6zQF6/plaza-usiacuri-4.jpg');
+}
+
+/* Cramen de atrato */
+
+.grid-section__item--carmenDeAtrato:nth-child(1) {
+    grid-area: 1 / 1 / 3 / 3;
+    background-image: url('https://i.postimg.cc/5tkkdyYm/intervencion-en-afirmado-carmen-de-atrato-El-Dauro-2.jpg');
+}
+
+.grid-section__item--carmenDeAtrato:nth-child(2) {
+    grid-area: 1 / 3 / 3 /5;
+    background-image: url('https://i.postimg.cc/90yx7Bxx/tierra-armada-carmen-de-atrato.jpg');
+}
+
+.grid-section__item--carmenDeAtrato:nth-child(3) {
+    grid-area: 3 / 1 / 5 / 3;
+    background-image: url('https://i.postimg.cc/3xttmNBH/estabilizacion-carmen-de-atrato.jpg');
+}
+
+.grid-section__item--carmenDeAtrato:nth-child(4) {
+    grid-area: 3 / 3 / 5 / 5;
+    background-image: url('https://i.postimg.cc/90yx7Bxx/tierra-armada-carmen-de-atrato.jpg');
+}
+
+/*Grid section sobre Carepa */
+
+.grid-section__item--carepa:nth-child(1) {
+    grid-area: 1 / 1 / 3 / 3;
+    background-image: url('https://i.postimg.cc/s2rybnWc/Whats-App-Image-2024-02-26-at-2-07-44-PM.jpg');
+}
+
+.grid-section__item--carepa:nth-child(2) {
+    grid-area: 1 / 3 / 3 /5;
+    background-image: url('https://i.postimg.cc/QdpZgpzW/Whats-App-Image-2024-02-26-at-2-07-43-PM-1.jpg');
+}
+
+.grid-section__item--carepa:nth-child(3) {
+    grid-area: 3 / 1 / 5 / 3;
+    background-image: url('https://i.postimg.cc/D0tRLZdg/Whats-App-Image-2024-02-26-at-2-07-43-PM.jpg');
+}
+
+.grid-section__item--carepa:nth-child(4) {
+    grid-area: 3 / 3 / 5 / 5;
+    background-image: url('https://i.postimg.cc/9MkkHMSh/Whats-App-Image-2024-02-26-at-2-07-42-PM-2.jpg');
+}
+
+/*Grid section sobre Placa huella */
+
+.grid-section__item--placaHuella:nth-child(1) {
+    grid-area: 1 / 1 / 3 / 3;
+    background-image: url('https://i.ibb.co/0mpjbf6/pavimento-placa-huella-santa-lucia3.jpg');
+}
+
+.grid-section__item--placaHuella:nth-child(2) {
+    grid-area: 1 / 3 / 5 /5;
+    background-image: url('https://i.ibb.co/kSzm8Jf/pavimento-placa-huella-santa-lucia.jpg');
+}
+
+.grid-section__item--placaHuella:nth-child(3) {
+    grid-area: 3 / 1 / 5 / 3;
+    background-image: url('https://i.ibb.co/N608QFd/pavimento-placa-huella-santa-lucia2.jpg');
+}
+

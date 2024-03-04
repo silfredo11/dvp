@@ -437,15 +437,8 @@ nav a.active {
             background-color: var(--second-white-color);
             position: relative;
             border-radius: 12px;
-            max-width: 360px;
         }
 
-        /* Cuando el dispositivo tiene un ancho mayor a 720px */
-        @media (min-width: 720px) {
-            .card {
-                min-width: 390px;
-            }
-        }
 
 /* Cuando el dispositivo tiene un ancho mayor a 920px */
 
@@ -619,15 +612,10 @@ nav a.active {
     
 }
 
-
-
 .empresas-desplazamiento__span4 {
     background-image: url("https://www.invias.gov.co/images/logos/logo_invias_nuevo.jpg");
     
 }
-
-
-
 
 @keyframes desplazamiento {
     from {
@@ -641,23 +629,34 @@ nav a.active {
 /* Main section experiencia */
 
 .main__section--experiencia {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr); /* Crea 3 columnas de igual tamaño */
-    grid-template-rows: repeat(3, auto); /* Crea 3 filas que se ajustan al contenido */
-    gap: 20px; /* Espacio entre filas y columnas */
+    /* Espacio entre filas y columnas */
     padding: 40px 40px 40px 40px; /* Espacio alrededor del contenido dentro de la sección */
     background-color: var(--second-gris-color); /* Color de fondo de la sección */
 }
 
+.main__Section--wrappa{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); /* Crea 3 columnas de igual tamaño */
+    grid-template-rows: repeat(3, auto); /* Crea 3 filas que se ajustan al contenido */
+    gap: 20px;
+    width: 100%;
+}
+
 .card__transition{
     transition: transform 500ms;
-    min-width: 400px;
 }
 
 .card__transition:hover{
     transform: scale(1.1);
     transition: transform 500ms;
 }
+
+/* Experience Style Media*/
+
+@media screen and (max-width: 1010px) {
+ 
+}
+  
 
 /* Modal code */
 

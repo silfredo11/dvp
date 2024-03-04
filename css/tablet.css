@@ -1,0 +1,28 @@
+.main__Section--wrappa{   
+    grid-template-columns: repeat(2, 1fr); /* Crea 3 columnas de igual tamaño */
+}
+
+.card__transition:nth-child(9) {
+    grid-column: 1 / -1;
+    margin: 0;
+    flex-direction: row;
+    gap: 20px;
+    margin: 0;
+    
+}
+
+.card__transition:nth-child(9) .card__a{
+    display: flex;
+    order: 1;
+    width: 40%;
+    margin: 0;
+}
+
+.card__transition:nth-child(9) .card__img{
+    height: auto;
+}
+
+.card__transition:nth-child(9) .card__info{
+    width: 60%;
+    order: 2;
+}

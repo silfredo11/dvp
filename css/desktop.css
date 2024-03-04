@@ -773,7 +773,7 @@ nav a.active {
   
   /* Media queries para responsive */
   
-  @media (max-width: 768px) {
+  @media (max-width: 600px) {
     .formulario__contenedor {
       width: 90%;
     }
@@ -784,13 +784,16 @@ nav a.active {
 /* This is the footer section */
 
 .footer {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr); /* Crea una grilla de 3 columnas */
-    gap: 20px; /* Espacio entre columnas */
     padding: 50px;
+    width: 100%;
+}
+
+.footer__wrappa{
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
     background-color: var(--white-color);
     color: var(--principal-black-color);
-    width: 100%;
 }
 
 .footer__column {

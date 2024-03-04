@@ -57,6 +57,22 @@
 
 }
 
+@media screen and (max-width: 580px)  {
+
+br{
+    display: none;
+}
+
+}
+
+@media screen and (max-width: 440px)  {
+
+    .main__section--experiencia{
+        padding: 20px;
+    }
+    
+}
+
 
 
 

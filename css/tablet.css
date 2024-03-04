@@ -26,3 +26,21 @@
     width: 60%;
     order: 2;
 }
+
+/* Here start footer */
+
+.footer {
+    padding: 20px;
+
+}
+
+@media screen and (max-width: 700px) {
+
+    .footer__wrappa{
+        flex-direction: column-reverse;
+        row-gap: 40px;
+    }
+
+}
+
+/* Here start main section quienes somos */

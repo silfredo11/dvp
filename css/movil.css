@@ -264,3 +264,8 @@
 }
 
 
+/* Contacto section */
+
+.contacto__texto br{
+    display: none;
+}

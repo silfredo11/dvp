@@ -55,6 +55,10 @@
         width: 100%;
     }
 
+    .main__section--presentacion--header{
+        padding: 20px;
+    }
+
 }
 
 @media screen and (max-width: 580px)  {
@@ -63,12 +67,26 @@ br{
     display: none;
 }
 
+.contenedor-logo img {
+    width: 140px; 
+    height: 80%; 
+}
+
 }
 
 @media screen and (max-width: 440px)  {
 
     .main__section--experiencia{
         padding: 20px;
+    }
+
+    .main__section--presentacion--header{
+        padding: 20px;
+    }
+
+    .contenedor-logo img {
+        width: 120px; 
+        height: 80%; 
     }
     
 }

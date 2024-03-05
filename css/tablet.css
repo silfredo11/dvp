@@ -44,3 +44,108 @@
 }
 
 /* Here start main section quienes somos */
+
+
+
+/* Estilos para el menú de navegación en dispositivos móviles */
+
+
+@media screen and (max-width: 850px) {
+
+    .nav{
+        display: none;
+    }
+
+    .header__hamburguer{
+        width: auto;
+        height: auto;
+    }
+
+    .header__hamburguerSons{
+        width: 35px;
+        height: 4px;
+        border-radius: 25%;
+        background-color: var(--button-color);
+        margin-bottom: 6px;
+    }
+    .main__section--presentacion--header{
+        position: absolute;
+    }
+    .mobileMenu{
+        width: 100%;
+        height: calc(100vh - 60px);
+        position: absolute;
+        top: 60px;
+        right: 0;
+        background-color: #1B1A17;
+        text-align: center;
+        z-index: 100;
+        opacity: 100%;
+        display: flex;
+        align-items: center;
+        transform: translateX(1000px);
+        animation-name: mobilMenu;
+        animation-duration: 400ms;
+        animation-timing-function: ease-in-out;
+        animation-delay: 100ms;
+        animation-fill-mode: forwards;
+    }
+
+    .innactive{
+        display: none;
+    }
+
+    @keyframes mobilMenu{
+        0%{
+            transform: translateX(190px);
+        }
+        100%{
+            transform: translateX(0px);
+        }
+    }
+
+    .mobilMenu__ul{
+        height: 50%;
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        padding: 20px 0;
+        
+    }
+
+    .mobilMenu__a:hover{
+        border-bottom:  #738A94;
+        border-bottom: 1px solid var(--description-color);
+    }
+
+    .mobilMenu__a{
+        color: #F0E3CA;
+        color: white;
+        font-size: 2.4rem;
+        text-transform: none;
+        font-weight: 400;
+    }
+
+    .son1{
+        width: 25px;
+        height: 1px;
+        border-radius: 0;
+        transform: rotate(46deg);
+        margin: 0;
+    }
+    
+    .son2{
+        
+        display: none;
+    }
+    
+    .son3{
+        width: 25px;
+        transform: rotate(-45deg);
+        margin: 0;
+        border-radius: 0;
+        height: 1px;
+    }  
+
+}

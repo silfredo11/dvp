@@ -111,4 +111,18 @@ document.addEventListener("DOMContentLoaded", () => {
 });
 
 
+/*Menu hamburguesa */
+
+document.addEventListener('DOMContentLoaded', function () {
+  const menuToggle = document.querySelector('.menu-toggle');
+  const nav = document.querySelector('.nav');
+
+  // Agregar un listener de clic al ícono del menú hamburguesa
+  menuToggle.addEventListener('click', function () {
+      // Alternar la clase 'active' en el menú hamburguesa
+      menuToggle.classList.toggle('active');
+      // Alternar la clase 'active' en el menú de navegación
+      nav.classList.toggle('active');
+  });
+});
 

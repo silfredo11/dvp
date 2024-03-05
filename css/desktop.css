@@ -669,8 +669,8 @@ nav a.active {
 
 .main__section--experiencia--h2{
     font-size: 3.6rem;
-    margin-bottom: 40px;
-    margin-top: 40px;
+    margin-bottom: 20px;
+    margin-top: 20px;
 }
 
 /* Experience Style Media*/
@@ -927,18 +927,6 @@ nav a.active {
     border: 1px solid #d0d0d0; /* Borde sutil */
 }
 
-/* Haciendo la grid responsive */
-@media (max-width: 768px) {
-    .grid-section {
-        grid-template-columns: repeat(2, 1fr); /* 2 columnas en pantallas pequeñas */
-    }
-}
-
-@media (max-width: 480px) {
-    .grid-section {
-        grid-template-columns: 1fr; /* 1 columna en pantallas muy pequeñas */
-    }
-}
 
 .close-button {
     display: flex;

@@ -75,9 +75,9 @@
         transition: all 0.3s linear;
     }
 
-    .main__section--presentacion{
+    /* .main__section--presentacion{
         position: absolute;
-    }
+    } */
     .mobileMenu{
         width: 100%;
         height: 100vh;

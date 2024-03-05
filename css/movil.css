@@ -279,3 +279,24 @@
 .main__section--experiencia{
     padding-top: 10px;
 }
+
+/*Photo section */
+
+@media screen and  (max-width: 490px){
+    
+    .grid-section {
+        grid-template-columns: repeat(2, 1fr); /* 4 columnas */
+        grid-template-rows: repeat(8, 1fr); /* 4 filas */
+        gap: 20px; /* Espacio entre grid items */
+    }
+
+    .main--fotos{
+        width: 100%;
+        height: auto;
+        margin-top: 0;
+        display: flex; /* Usa flexbox para centrar la sección de la grid */
+        justify-content: center;
+        align-items: center;
+        padding: 20px;
+    }
+}

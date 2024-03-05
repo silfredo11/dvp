@@ -63,7 +63,7 @@
 
 @media screen and (max-width: 580px)  {
 
-br{
+    .main__section--presentacion--son br{
     display: none;
 }
 
@@ -97,7 +97,7 @@ br{
     font-size: 4rem;
     margin: 0 20px;
 }
-br{
+.main__section--presentacion--son br{
     display: none;
 }
 
@@ -235,6 +235,26 @@ br{
 
 }
 
+/*Empresas que confian en dvp*/
 
+.empresas-fijo {
+    font-size: 3.6rem;  
+}
+
+.empresas-desplazamiento__span{
+    margin-right: 40px; /* Espacio entre nombres de empresas */
+    width: 160px;
+    height: 60px;
+}
+
+@media screen and (max-width: 560px){
+    .empresas-fijo {
+        text-align: center;
+    }
+
+    .empresas-fijo br {
+        display: flex;
+    }
+}
 
 

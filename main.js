@@ -86,29 +86,99 @@ window.addEventListener("load", () => {
   adjustHeaderPosition();
 });
 
+// document.addEventListener("DOMContentLoaded", () => {
+//   const wrapper = document.querySelector('.ourService__wrappa');
+//   const cards = document.querySelectorAll('.ourService__card');
+//   const btnLeft = document.querySelector('.scroll-btn.left');
+//   const btnRight = document.querySelector('.scroll-btn.right');
+
+//   if(cards.length > 0) {
+//     // Asume que todas las tarjetas tienen el mismo ancho y el contenedor un width fijo o máximo.
+//     const cardStyle = getComputedStyle(cards[0]);
+//     const cardMarginRight = parseFloat(cardStyle.marginRight);
+//     // Añade un extra al ancho de la tarjeta para asegurar que se muestre completamente la siguiente.
+//     const extraSpace = 20; // Ajusta este valor según sea necesario para cubrir el gap completo y un poco más.
+//     const cardWidth = cards[0].offsetWidth + cardMarginRight + extraSpace; // Añade el margen y el espacio extra al ancho de la tarjeta
+
+//     btnLeft.addEventListener('click', () => {
+//       wrapper.scrollLeft -= cardWidth; // Usa el ancho calculado de la tarjeta más el espacio extra
+//     });
+
+//     btnRight.addEventListener('click', () => {
+//       wrapper.scrollLeft += cardWidth; // Usa el ancho calculado de la tarjeta más el espacio extra
+//     });
+//   }
+// });
+
 document.addEventListener("DOMContentLoaded", () => {
   const wrapper = document.querySelector('.ourService__wrappa');
   const cards = document.querySelectorAll('.ourService__card');
   const btnLeft = document.querySelector('.scroll-btn.left');
   const btnRight = document.querySelector('.scroll-btn.right');
 
-  if(cards.length > 0) {
-    // Asume que todas las tarjetas tienen el mismo ancho y el contenedor un width fijo o máximo.
-    const cardStyle = getComputedStyle(cards[0]);
-    const cardMarginRight = parseFloat(cardStyle.marginRight);
-    // Añade un extra al ancho de la tarjeta para asegurar que se muestre completamente la siguiente.
-    const extraSpace = 40; // Ajusta este valor según sea necesario para cubrir el gap completo y un poco más.
-    const cardWidth = cards[0].offsetWidth + cardMarginRight + extraSpace; // Añade el margen y el espacio extra al ancho de la tarjeta
-
-    btnLeft.addEventListener('click', () => {
-      wrapper.scrollLeft -= cardWidth; // Usa el ancho calculado de la tarjeta más el espacio extra
-    });
-
-    btnRight.addEventListener('click', () => {
-      wrapper.scrollLeft += cardWidth; // Usa el ancho calculado de la tarjeta más el espacio extra
-    });
+  // Función para calcular el desplazamiento necesario según el ancho de pantalla
+  function calculateScrollDistance() {
+      if(window.innerWidth <= 600) { // Ejemplo para dispositivos móviles
+          // Asumiendo que en móviles quieras desplazar menos distancia
+          return cards[0].offsetWidth; // O cualquier otra lógica específica para móviles
+      } else {
+          // Para pantallas más grandes, incluye el margen y un espacio extra si es necesario
+          const cardStyle = getComputedStyle(cards[0]);
+          const cardMarginRight = parseFloat(cardStyle.marginRight);
+          return cards[0].offsetWidth + cardMarginRight; // Ajusta esto según tu diseño
+      }
   }
+
+  btnLeft.addEventListener('click', () => {
+      const scrollDistance = calculateScrollDistance();
+      wrapper.scrollLeft -= scrollDistance;
+  });
+
+  btnRight.addEventListener('click', () => {
+      const scrollDistance = calculateScrollDistance();
+      wrapper.scrollLeft += scrollDistance;
+  });
 });
+
+// document.addEventListener("DOMContentLoaded", () => {
+//   const wrapper = document.querySelector('.ourService__wrappa');
+//   const cards = document.querySelectorAll('.ourService__card');
+//   const btnLeft = document.querySelector('.scroll-btn.left');
+//   const btnRight = document.querySelector('.scroll-btn.right');
+
+//   function calculateScrollDistance() {
+//     if (window.innerWidth <= 600) {
+//       // Lógica específica para móviles
+//       return cards[0].offsetWidth;
+//     } else {
+//       const cardStyle = getComputedStyle(cards[0]);
+//       const cardMarginLeft = parseFloat(cardStyle.marginLeft);
+//       const cardMarginRight = parseFloat(cardStyle.marginRight);
+//       const gap = 1200; // Ajusta este valor según el espacio que deseas que se vea
+//       return cards[0].offsetWidth + cardMarginLeft + cardMarginRight - gap;
+//     }
+//   }
+
+//   btnLeft.addEventListener('click', () => {
+//     const scrollDistance = calculateScrollDistance();
+//     wrapper.scrollBy({
+//       left: -scrollDistance,
+//       behavior: 'smooth',
+//     });
+//   });
+
+//   btnRight.addEventListener('click', () => {
+//     const scrollDistance = calculateScrollDistance();
+//     wrapper.scrollBy({
+//       left: scrollDistance,
+//       behavior: 'smooth',
+//     });
+//   });
+
+//   // Añadir transiciones al contenedor
+//   wrapper.style.transition = 'transform 0.5s ease-in-out';
+// });
+
 
 
 /*Menu hamburguesa */

@@ -226,3 +226,17 @@
         top: 400px;
     }
 }
+
+/* Main section quienes somos */
+
+.main__section--quienessomos {
+    padding: 90px;
+}
+
+.main__section--quienessomos__description {
+    width: 100%;
+}
+
+.main__section--quienessomos__image {
+    width: 100%;
+}

@@ -172,6 +172,24 @@ br{
     }
 }
 
+/* */
+
+.main__section--quienessomos {
+    padding:  45px;
+}
+
+.main__section--quienessomos__description {
+    width: 100%;
+}
+
+.main__section--quienessomos__image {
+    width: 100%;
+}
+
+.main__section--quienessomos__title {
+    font-size: 3.8rem;
+}
+
 
 
 

@@ -293,10 +293,5 @@
     .main--fotos{
         width: 100%;
         height: auto;
-        margin-top: 0;
-        display: flex; /* Usa flexbox para centrar la sección de la grid */
-        justify-content: center;
-        align-items: center;
-        padding: 20px;
     }
 }

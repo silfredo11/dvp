@@ -162,7 +162,14 @@ br{
     .contact-button{
         top: 420px;
     }
-    
+    .main__section--presentacion p{
+        top: 270px;
+        width: 100%;
+    }
+
+    .contact-button{
+        top: 370px;
+    }
 }
 
 

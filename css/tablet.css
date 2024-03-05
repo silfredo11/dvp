@@ -50,7 +50,7 @@
 /* Estilos para el menú de navegación en dispositivos móviles */
 
 
-@media screen and (max-width: 850px) {
+@media screen and (max-width: 855px) {
 
     .nav{
         display: none;
@@ -167,6 +167,16 @@
 
 /* Principal section style */
 
+
+
+@media screen and (max-width: 900px){
+    
+    .main__section--presentacion h1{
+        font-size: 5.4rem;
+    }
+}
+
+
 @media screen and (min-width: 905px) and (max-width: 980px){
     
     .main__section--presentacion h1{
@@ -175,14 +185,27 @@
     }
 }
 
-@media screen and (max-width: 830px){
+@media screen and (max-width: 850px){
     
+   
+    .main__section--presentacion h1{
+        font-size: 5.4rem;
+    }
+}
+
+@media screen and (min-width: 700px) and (max-width: 830px){
+    
+    .main__section--presentacion h1{
+        margin: 0 40px;
+
+    }
     .main__section--presentacion p{
-        top: 350px;
+        top: 320px;
     }
     .contact-button{
-        top: 450px;
+        top: 420px;
     }
+    
 }
 
 @media screen and (min-width: 830px) and (max-width: 980px){
@@ -194,4 +217,12 @@
         top: 560px;
     }
 }
-
+@media screen and (min-width: 830px) and (max-width: 902px){
+    
+    .main__section--presentacion p{
+        top: 300px;
+    }
+    .contact-button{
+        top: 400px;
+    }
+}

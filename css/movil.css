@@ -238,7 +238,7 @@
 /*Empresas que confian en dvp*/
 
 .empresas-fijo {
-    font-size: 3.6rem;  
+    font-size: 3rem;  
 }
 
 .empresas-desplazamiento__span{
@@ -255,6 +255,12 @@
     .empresas-fijo br {
         display: flex;
     }
+}
+
+.empresas-desplazamiento {
+    
+    animation: desplazamiento 10s linear infinite; /* Ajusta la duración según la necesidad */
+  
 }
 
 

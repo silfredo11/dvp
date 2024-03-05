@@ -191,8 +191,34 @@ br{
     font-size: 3.8rem;
 }
 
-/* */
+/* OurService section*/
 
+@media screen and (max-width: 600px){
+    
+    
+.ourService__card{
+    flex-direction: column;
+    height: auto;
+    width: 100%;
+    min-width: 100%;
+    gap: 20px;
+}
+
+.ourService__card--img{
+    width: 100%;
+}
+
+.ourService__card--img img {
+    object-fit: cover;
+    width: 100%;
+    height: 220px;
+}
+
+.ourService__information{
+    width: 100%;
+    padding-top: 20px;
+}
+}
 
 
 

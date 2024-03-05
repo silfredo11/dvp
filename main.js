@@ -113,16 +113,42 @@ document.addEventListener("DOMContentLoaded", () => {
 
 /*Menu hamburguesa */
 
-document.addEventListener('DOMContentLoaded', function () {
-  const menuToggle = document.querySelector('.menu-toggle');
-  const nav = document.querySelector('.nav');
+const hamburguerMenu = document.querySelector('.header__hamburguer');
+const mobileMenu = document.querySelector('.mobileMenu');
+const iconMnuBar2 = document.querySelector('.header__hamburguerSons2');
+const iconMnuBar1 = document.querySelector('.header__hamburguerSons1');
+const iconMnuBar3 = document.querySelector('.header__hamburguerSons3');
 
-  // Agregar un listener de clic al ícono del menú hamburguesa
-  menuToggle.addEventListener('click', function () {
-      // Alternar la clase 'active' en el menú hamburguesa
-      menuToggle.classList.toggle('active');
-      // Alternar la clase 'active' en el menú de navegación
-      nav.classList.toggle('active');
-  });
+// Función para alternar el menú hamburguesa y la animación a "X"
+function toggleHamburguerMenu() {
+    mobileMenu.classList.toggle('innactive');
+    // Alternar las clases para la animación de las barras
+    toggleBarsAnimation();
+}
+
+// Función para alternar las clases que controlan la animación de las barras
+function toggleBarsAnimation() {
+    iconMnuBar1.classList.toggle('son1');
+    iconMnuBar2.classList.toggle('son2');
+    iconMnuBar3.classList.toggle('son3');
+    hamburguerMenu.classList.toggle('active'); // Asegúrate de que esta clase controle el cambio visual en CSS
+}
+
+// Evento de clic para el menú hamburguesa
+hamburguerMenu.addEventListener('click', toggleHamburguerMenu);
+
+// Función para cerrar el menú y revertir la animación de las barras cuando se selecciona una opción
+function closeMenuOnOptionSelect() {
+    if (!mobileMenu.classList.contains('innactive')) {
+        mobileMenu.classList.add('innactive');
+        // Revertir la animación de las barras si el menú se está cerrando
+        if (hamburguerMenu.classList.contains('active')) {
+            toggleBarsAnimation();
+        }
+    }
+}
+
+// Cerrar el menú hamburguesa automáticamente al seleccionar una opción y revertir las barras a su estado original
+document.querySelectorAll('.mobilMenu__a').forEach(item => {
+    item.addEventListener('click', closeMenuOnOptionSelect);
 });
-

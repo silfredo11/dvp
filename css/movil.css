@@ -259,7 +259,7 @@
 
 .empresas-desplazamiento {
     
-    animation: desplazamiento 10s linear infinite; /* Ajusta la duración según la necesidad */
+    animation: desplazamiento 5s linear infinite; /* Ajusta la duración según la necesidad */
   
 }
 
@@ -268,4 +268,14 @@
 
 .contacto__texto br{
     display: none;
+}
+
+
+.main__section--experiencia--h2{
+    margin-bottom: 20px;
+    margin-top: 20px;
+}
+
+.main__section--experiencia{
+    padding-top: 10px;
 }

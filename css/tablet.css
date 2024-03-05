@@ -240,3 +240,29 @@
 .main__section--quienessomos__image {
     width: 100%;
 }
+
+ /**/
+
+.ourService__information{
+    padding-top: 0px;
+}
+
+.ourService__card--img img {
+    height: 100%;
+}
+
+/* Scroll btn */
+
+.scroll-btn {
+    display: flex
+   
+}
+
+
+.ourService__card{
+    display: flex;
+    height: 260px;
+    width: 100%;
+    min-width: 100%;
+    gap: 20px;
+}

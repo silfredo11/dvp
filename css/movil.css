@@ -172,7 +172,7 @@ br{
     }
 }
 
-/* */
+/* Here start quienes somos section*/
 
 .main__section--quienessomos {
     padding:  45px;
@@ -190,6 +190,8 @@ br{
 .main__section--quienessomos__title {
     font-size: 3.8rem;
 }
+
+/* */
 
 
 

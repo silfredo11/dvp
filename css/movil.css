@@ -216,8 +216,23 @@ br{
 
 .ourService__information{
     width: 100%;
-    padding-top: 20px;
 }
+
+.ourService__information--title{
+    font-size: 2.6rem;
+    margin-bottom: 6px;
+}
+
+.ourService__information--p{
+    font-size: 1.8rem;
+ 
+}
+
+.scroll-btn {
+   top: 50%;
+   
+}
+
 }
 
 

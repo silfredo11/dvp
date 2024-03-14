@@ -179,10 +179,10 @@
 
 @media screen and (min-width: 905px) and (max-width: 980px){
     
-    .main__section--presentacion h1{
+    /* .main__section--presentacion h1{
         margin: 0 40px;
         top: 300px;
-    }
+    } */
 }
 
 @media screen and (max-width: 850px){
@@ -195,7 +195,7 @@
 
 @media screen and (min-width: 700px) and (max-width: 830px){
     
-    .main__section--presentacion h1{
+    /* .main__section--presentacion h1{
         margin: 0 40px;
 
     }
@@ -204,27 +204,27 @@
     }
     .contact-button{
         top: 420px;
-    }
+    } */
     
 }
 
 @media screen and (min-width: 830px) and (max-width: 980px){
     
-    .main__section--presentacion p{
+    /* .main__section--presentacion p{
         top: 470px;
     }
     .contact-button{
         top: 560px;
-    }
+    } */
 }
 @media screen and (min-width: 830px) and (max-width: 902px){
     
-    .main__section--presentacion p{
+    /* .main__section--presentacion p{
         top: 300px;
     }
     .contact-button{
         top: 400px;
-    }
+    } */
 }
 
 /* Main section quienes somos */

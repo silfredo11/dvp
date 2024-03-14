@@ -95,7 +95,6 @@
 
 .main__section--presentacion h1{
     font-size: 4rem;
-    margin: 0 20px;
 }
 .main__section--presentacion--son br{
     display: none;
@@ -104,33 +103,30 @@
 
 @media screen and (min-width: 560px) and (max-width: 700px){
     
-    .main__section--presentacion p{
+    /* .main__section--presentacion p{
         top: 250px;
     }
     .contact-button{
         top: 400px;
-    }
+    } */
 }
 
-.main__section--presentacion p{
-    margin: 0 40px;
-}
 
-.contact-button{
+/* .contact-button{
     top: 350px;
-}
+} */
 
 @media screen and (max-width: 598px){
     
    
-    .main__section--presentacion p{
+    /* .main__section--presentacion p{
         top: 290px;
         width: 100%;
-    }
+    } */
 
-    .contact-button{
+    /* .contact-button{
         top: 390px;
-    }
+    } */
     .main__section--presentacion h1{
         width: 100%;
     }
@@ -140,7 +136,6 @@
     
     .main__section--presentacion h1{
         font-size: 3.4rem;
-        margin: 0 20px;
     }
     
 }
@@ -159,7 +154,7 @@
 
 @media screen and (max-width: 420px){
     
-    .contact-button{
+    /* .contact-button{
         top: 420px;
     }
     .main__section--presentacion p{
@@ -169,7 +164,7 @@
 
     .contact-button{
         top: 370px;
-    }
+    } */
 }
 
 /* Here start quienes somos section*/
